@@ -8,7 +8,7 @@ def creationGraphe(idg,filepath) :
     g._idg = idg
     with open(filepath,newline ='') as file :
         reader =csv.reader(file, delimiter ='\t')
-        nbrenoeud = next(reader)
+        g._nbrenoeud = int (next(reader)[0])
         for row in reader:
             good1 = 0
             good2 = 0
@@ -37,6 +37,10 @@ def creationGraphe(idg,filepath) :
 
 
 g =creationGraphe(1,'fileGraph1.csv')
+print (g.Djikstra(1,4))
+
+
+
 
 # g =graphe()
 # n1= noeud()
@@ -51,4 +55,4 @@ g =creationGraphe(1,'fileGraph1.csv')
 # g.addLien(l1)
 # g.addLien(l2)
 # g.addLien(l2)
-print (g.Djikstra(1,4))
+
