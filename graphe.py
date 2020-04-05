@@ -69,7 +69,7 @@ class graphe(lien, noeud):
         distfinale = distList[narrive -1]
         chemin = list()
         tmpNoeud = narrive
-        while tmpNoeud != narrive :
+        while tmpNoeud != ndepart :
             tmpNoeud = precList[tmpNoeud -1]
             chemin.append(tmpNoeud)
         return chemin, distfinale
