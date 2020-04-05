@@ -23,20 +23,20 @@ def creationGraphe(idg,filepath) :
                     good2 = 1
             if (good1 == 0) :
                 n1 = noeud()
-                n1.setIdn(row[0])
+                n1.setIdn(int (row[0]))
                 g.addNoeud(n1)
             if (good2 == 0) :
                 n2 = noeud()
-                n2.setIdn(row[1])
+                n2.setIdn(int(row[1]))
                 g.addNoeud(n2)
             dist = row[2]
-            l1 = lien(n1,n2,row[2])
+            l1 = lien(n1,n2,float(row[2]))
             g.addLien(l1)
     g.__str__()
     return g
 
 
-#g =creationGraphe(1,'fileGraph1.csv')
+g =creationGraphe(1,'fileGraph1.csv')
 
 # g =graphe()
 # n1= noeud()
@@ -51,4 +51,4 @@ def creationGraphe(idg,filepath) :
 # g.addLien(l1)
 # g.addLien(l2)
 # g.addLien(l2)
-g.Djikstra(1,3)
+print (g.Djikstra(1,4))

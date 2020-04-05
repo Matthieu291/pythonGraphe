@@ -30,9 +30,9 @@ class graphe(lien, noeud):
     def obtenirProchainNoeud (self, noeudid) :
         dict1 = dict()
         for i in self._dictLien.values() :
-            if (i.getNoeud1().getIdn() == noeudid ) :
+            if (int (i.getNoeud1().getIdn()) == noeudid ) :
                 dict1[i.getNoeud2().getIdn()] = i.getDistance()
-            if (i.getNoeud2().getIdn() == noeudid ) :
+            if (int (i.getNoeud2().getIdn()) == noeudid ) :
                 dict1[i.getNoeud1().getIdn()] =i.getDistance()
         return dict1
 

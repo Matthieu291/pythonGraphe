@@ -1,5 +1,5 @@
 import noeud
-#
+
 class lien () :
     """Class with the graphs links"""
     __idlglob = 0
